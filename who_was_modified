@@ -1,0 +1,4 @@
+#!/bin/bash
+#echo "What is the last save time ? format : (YYYY-MM-DD)" ; read $last_save
+day_difference=$((($(date +%s)-$(date +%s --date "2021-07-11"))/(3600*24)))
+find / -mtime -$day_difference -ls   #= search and show all files who was modified the last n time.
